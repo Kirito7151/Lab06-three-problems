@@ -10,11 +10,11 @@
 
 int choice = 0;
 Random rng = new Random(6000);
-//do while: they need to know the choices before they can make a desicion
+//do while: they need to know the choices before they can make a decsion on what to choose
 do
 {
 
-//do while: the info has the print out before the person can choose an onption within the parameters
+//do while: the info has to be shown before the person can enter a number
 do
 {
 Console.WriteLine(" ");
@@ -27,7 +27,7 @@ Console.WriteLine("4. All Three");
 Console.WriteLine("5. Quit");
 Console.WriteLine(" ");
 
-Console.Write("Choose 1 through 5: ");
+Console.Write("Choose A Number 1 through 5: ");
 
 choice = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(" ");
@@ -38,33 +38,33 @@ if (choice == 1 || choice == 4)
 Console.WriteLine("=== Exercise 1: The Grade Checker ===");
 Console.WriteLine(" ");
 
-int  = -1;
+int number = -1;
 //while: until the score is within the area of number we need to keep asking for the correct score.
-while(number < 0 || score > 100)
+while(number < 0 || number > 100)
 {
-    Console.WriteLine("The score must be between 0 and 100.");
-    Console.Write("Score: ");
-    score = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Your Grades must be between 0 and 100.");
+    Console.Write("Grade: ");
+    number = Convert.ToInt32(Console.ReadLine());
 }
-if(score >= 90)
+if(number >= 90)
 {
-    Console.WriteLine(score.ToString() + " earns an A.");
+    Console.WriteLine(number.ToString() + " earns an A.");
 }
-else if(score >= 80)
+else if(number >= 80)
 {
-    Console.WriteLine(score.ToString() + " earns a B.");
+    Console.WriteLine(number.ToString() + " earns a B.");
 }
-else if(score >= 70)
+else if(number >= 70)
 {
-    Console.WriteLine(score.ToString() + " earns a C.");
+    Console.WriteLine(number.ToString() + " earns a C.");
 }
-else if(score >= 60)
+else if(number >= 60)
 {
-    Console.WriteLine(score.ToString() + " earns a D");
+    Console.WriteLine(number.ToString() + " earns a D");
 }
-else if(score < 60)
+else if(number < 60)
 {
-    Console.WriteLine(score.ToString() + " earns an F.");
+    Console.WriteLine(number.ToString() + " earns an F.");
 }
 }
 if (choice == 2 || choice == 4)
@@ -78,7 +78,7 @@ char answer = 'y';
 int count = 0;
 int countWin = 0;
 
-//do while: we want the dice to roll before the person declares if they'd like to roll again
+//do while: we want the dice finish rolling before the person decides if they would like to roll agian
 do
 {
     
@@ -94,12 +94,12 @@ if(rollOne == 1 && rollTwo == 1)
     }
     else if(rollOne == rollTwo)
     {
-       Console.WriteLine("Roll " + count + ": " + rollOne + " and " + rollTwo + ", total " + total + ". Doubles!");  
+       Console.WriteLine("Roll " + count + ": " + rollOne + " and " + rollTwo + ", total " + total + ". Doubles");  
  Console.Write("Roll again? (y/n): ");
     }
     else if(total == 7 || total == 11)
     {
-        Console.WriteLine("Roll " + count + ": " + rollOne + " and " + rollTwo + ", total " + (rollOne + rollTwo) + ". A winner.");
+        Console.WriteLine("Roll " + count + ": " + rollOne + " and " + rollTwo + ", total " + (rollOne + rollTwo) + ". Winner.");
         countWin++;  
  Console.Write("Roll again? (y/n): ");
     }
@@ -126,7 +126,7 @@ scores = new int[5];
 //for: we need to know the position of each value in the array, so we can determine the number of values
 for(int i = 0; i < scores.Length; i++)
 {
-Console.Write("Score " + (i + 1) + ": ");
+Console.Write("Grade " + (i + 1) + ": ");
 scores[i] = Convert.ToInt32(Console.ReadLine());
 }
 
@@ -157,7 +157,7 @@ double average = Convert.ToDouble(total) / scores.Length;
 
 //Output
 Console.WriteLine(" ");
-Console.WriteLine("Scores entered: " + scores.Length);
+Console.WriteLine("Grades entered: " + scores.Length);
 Console.WriteLine("Total: " + total); 
 Console.WriteLine("Average: " + average);
 Console.WriteLine("Highest: " + highest);
